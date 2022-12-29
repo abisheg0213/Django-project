@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/createproj">click to register new project</a><hr>
+{% for i in data %}
+<li>Project Name: <a href="/view/{{i.projname}}">{{i.projname}}</a>       <a href="/update_project/{{i.projname}}">UPDATE</a>       <a href="/delete/{{i.projname}}">DELETE</a></li>
+
+{% endfor %}
+</body>
+</html>
