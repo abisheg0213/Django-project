@@ -6,8 +6,7 @@
     <title>Title</title>
 </head>
 <body>
-d={{data.proj_img}}
-<img src="{% static 'image/d' %}">
+<img style="max-width: 500px;" src="{{data.proj_img.url}}"><br>
 {{data.projname}}<br>{{data.domain}}<br>
 TAGS:<br><br>
 {% for i in data1 %}

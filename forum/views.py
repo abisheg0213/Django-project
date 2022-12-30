@@ -16,7 +16,7 @@ def projectdis(request,pk):
 def create_project(request):
     myform=project_form()
     if request.method=='POST':
-        data=project_form(request.POST)
+        data=project_form(request.POST,request.FILES)
         if data.is_valid():
             data.save()
             return redirect('display')
