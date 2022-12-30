@@ -1,10 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Display-Home</title>
+    <link rel='stylesheet'  type='text/css'  media='screen'  href={% static "style/main.css" %}>
 </head>
 <body>
+<h1>Ecommerce</h1>
+<img src="{% static 'image/logo-social.png ' %}">
 <a href="/createproj">click to register new project</a><hr>
 {% for i in data %}
 <li>Project Name: <a href="/view/{{i.projname}}">{{i.projname}}</a>       <a href="/update_project/{{i.projname}}">UPDATE</a>       <a href="/delete/{{i.projname}}">DELETE</a></li>

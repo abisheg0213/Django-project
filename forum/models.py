@@ -4,6 +4,7 @@ from datetime import datetime
 class project(models.Model):
     projname=models.CharField(max_length=250)
     date_of_start=models.DateTimeField(auto_now_add=True)
+    proj_img=models.ImageField(null=True,blank=True,default='logo_social.png')
     tags=models.ManyToManyField('tag',blank=True)
     domain=models.CharField(max_length=100)
     def __str__(self):

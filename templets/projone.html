@@ -1,10 +1,13 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+d={{data.proj_img}}
+<img src="{% static 'image/d' %}">
 {{data.projname}}<br>{{data.domain}}<br>
 TAGS:<br><br>
 {% for i in data1 %}
