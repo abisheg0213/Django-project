@@ -7,6 +7,7 @@ class project(models.Model):
     proj_img=models.ImageField(null=True,blank=True,default='logo_social.png')
     tags=models.ManyToManyField('tag',blank=True)
     domain=models.CharField(max_length=100)
+    desc=models.TextField(max_length=700,default="hello world")
     def __str__(self):
         return self.projname
 

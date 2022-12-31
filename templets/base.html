@@ -60,17 +60,17 @@
                     Feedback (72 Votes)
                   </p>
                   <div class="project__tags">
-        
+        {% for tag in i.tags.all %}
                     <span class="tag tag--pill tag--main">
-                      <small>react</small>
+                      <small>{{tag.name}}</small>
                     </span>
-                
-                  <span class="tag tag--pill tag--main">
+                {% endfor %}
+                  {% comment %} <span class="tag tag--pill tag--main">
                       <small>GraphQL</small>
                     </span>
                     <span class="tag tag--pill tag--main">
                       <small>TypeScript</small>
-                    </span>  
+                    </span>   {% endcomment %}
                   </div>
                 </div>
               </a>
