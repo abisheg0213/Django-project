@@ -7,11 +7,11 @@ def display(request):
     dta=project.objects.all()
     return render(request,'base.html',{'data':dta})
 def projectdis(request,pk):
-    # print("*****")
-    # print(type(pk))
+    print("*****")
+    print(type(pk))
     data=project.objects.get(projname=pk)
     tag=data.tags.all()
-    print(data)
+    print(tag)
     return render(request,'projone.html',{'data':data,'data1':tag})
 def create_project(request):
     myform=project_form()
